@@ -111,7 +111,7 @@ a.more:hover {
 
 @media all and (max-width: 1200px) {
     .text-container {
-        padding-right: 40%;
+        padding-right: 60%;
     }
     .bg-profile {
         width: 50%;
