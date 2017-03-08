@@ -1,0 +1,150 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    height: 100%;
+    font-size: 19px;
+
+    overflow-y: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+body {
+    color: #737373;
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.28;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+}
+
+.site-main {
+    padding: 0;
+    width: 100%;
+    /*margin-bottom: 120px; /* set to same as footer */
+}
+
+.main-wrapper {
+    padding-left: 10%;
+    padding-top: 250px;
+    padding-bottom: 200px;
+}
+
+.bg-profile {
+    position: relative;
+    right: 0;
+    height: 560px;
+    top: -560px;
+    width: 700px;
+    float: right;
+    text-align: center;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.profilepic {
+    width: auto;
+    height: inherit;
+    position: relative;
+}
+
+.text-container {
+    padding-right: 700px;
+}
+
+a {
+    color: #737373;
+    text-decoration: underline;
+}
+
+a:hover {
+    color:darker(#737373,15%);
+}
+
+a.more {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+a.more:hover {
+    color: #1565C0;
+}
+
+
+#signature{
+    margin-top:20px;
+    width:120px;
+    margin-left: -10px;
+    max-width: 80%;
+}
+
+.name-tag {
+    position: absolute;
+    left: 36px;
+    top: 27px;
+    color: #2196F3;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: larger;
+    font-variant: small-caps;
+}
+
+#menu {
+    position: absolute;
+    right: 36px;
+    top: 27px;
+    z-index: 999;
+}
+#menu a {
+    text-decoration: none;
+}
+#menu ul {
+    list-style: none;
+    margin: 0;
+    text-align: right;
+}
+#menu li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+@media all and (max-width: 1200px) {
+    .text-container {
+        padding-right: 40%;
+    }
+    .bg-profile {
+        width: 50%;
+        height: 400px;
+        top: -400px;
+    }
+}
+@media all and (max-width: 700px) {
+    .text-container {
+        padding-right: 10%;
+    }
+    .bg-profile img.profilepic {
+        display: none;
+    }
+    .main-wrapper {
+        padding-top: 150px;
+    }
+    #menu li {
+        display: block;
+    }
+}
+
+/* initially hidden text */
+.hide-block, .hide-inline {
+    display: none;
+}
+
+/* footer */
+footer.site-footer {
+    background-color: #eaeaea;
+    height: 120px;
+    border-top: 3px solid #2196F3;
+    -moz-box-shadow: inset 0 7px 17px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 7px 17px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 7px 17px 0 rgba(0, 0, 0, 0.2);
+}
