@@ -18,6 +18,10 @@ body {
     padding: 0;
 }
 
+p, li {
+    font-size: 17px;
+}
+
 .site-main {
     padding: 0;
     width: 100%;
@@ -27,13 +31,8 @@ body {
 
 .main-wrapper {
     padding-left: 10%;
-    padding-top: 250px;
+    padding-top: 220px;
     padding-bottom: 200px;
-}
-
-.main-wrapper p {
-    line-height: 1.28;
-    font-size: 19px;
 }
 
 .bg-profile {
@@ -84,12 +83,8 @@ a.more:hover {
     max-width: 80%;
 }
 
-.name-tag , #menu li {
-    line-height: 1.28;
-    font-size: 24px;
-}
-
 .name-tag {
+    font-size: 24px;
     position: absolute;
     left: 36px;
     top: 27px;
@@ -115,6 +110,7 @@ a.more:hover {
     text-align: right;
 }
 #menu li {
+    font-size: 22px;
     display: inline-block;
     padding-left: 20px;
     font-weight: normal;
@@ -128,6 +124,9 @@ a.more:hover {
         width: 50%;
         height: 400px;
         top: -400px; /* footer has 20px padding */
+    }
+    .main-wrapper {
+        padding-top: 190px;
     }
 }
 @media all and (max-width: 700px) {
