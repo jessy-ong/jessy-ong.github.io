@@ -12,7 +12,12 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-orange.min.css">
     <link rel="stylesheet" href="./styles/main.css">
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 
 <body>
@@ -102,7 +107,7 @@
                 <br>
 
                 <p style="margin-top:25px;">
-                    PS: Leave me a message at the bottom of this page!
+                    PS: Leave me a private message at the bottom of this page!
                 </p>
             </div>
 
@@ -125,9 +130,18 @@
             <!-- hidden iframe to push the script response to -->
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
             <form id="short-feedback" class="center-wrapper" target="hidden_iframe" onsubmit="onShortFeedbackSubmit();" action="https://script.google.com/macros/s/AKfycbwDHgyz5CZRHJbxIG5s3t0YYV5rYie3Mr7PCT69tK_ck5yynKw/exec" method="post">
-                <label>Leave me a message</label>
-                <input type="text" name="message" id="message">
-                <button type="submit">Send</button>
+                <!--label>Leave me a message</label-->
+                <!--input type="text" name="message" id="message"-->
+                <div class="mdl-textfield mdl-js-textfield" style="margin-left:20px;">
+                    <input class="mdl-textfield__input" type="text" id="message">
+                    <label class="mdl-textfield__label" for="message">Your message...</label>
+                </div>
+                <!--button type="submit">Send</button-->
+                <!-- Colored FAB button -->
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                    <i class="material-icons">send</i>
+                </button>
+
             </form>
 
             <div class="feedback-thanks center-wrapper" style="display:none;">
