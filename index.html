@@ -18,7 +18,9 @@
 <body>
     <main class="site-main">
 
-        <div class="name-tag"> Jessy Ong </div>
+        <a href="https://jessy-ong.github.io">
+            <div class="name-tag"> Jessy Ong </div>
+        </a>
 
         <nav id="menu">
             <ul>
@@ -97,7 +99,11 @@
 
                 <br>
                 <img id="signature" alt="Jessy Ong" title="Jessy Ong" src="img/signature.jpg">
+                <br>
 
+                <p style="margin-top:25px;">
+                    PS: Leave me a message at the bottom of this page!
+                </p>
             </div>
 
         </div>
@@ -108,53 +114,29 @@
         <div class="bg-profile">
             <img class="profilepic" title="" alt="" src="img/jessy.jpg">
         </div>
+
+        <div class="link-section">
+            <div class="center-wrapper">
+                <a href="https://fb.me/JessyForSPSrep">Facebook</a>
+            </div>
+        </div>
+
+        <div class="short-feedback">
+            <!-- hidden iframe to push the script response to -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+            <form id="short-feedback" class="center-wrapper" target="hidden_iframe" onsubmit="onShortFeedbackSubmit();" action="https://script.google.com/macros/s/AKfycbwDHgyz5CZRHJbxIG5s3t0YYV5rYie3Mr7PCT69tK_ck5yynKw/exec" method="post">
+                <label>Leave me a message</label>
+                <input type="text" name="message" id="message">
+                <button type="submit">Send</button>
+            </form>
+
+            <div class="feedback-thanks center-wrapper" style="display:none;">
+                Thank you for taking the time! Your feedback was sent.
+            </div>
+        </div>
     </footer>
 
-    <script>
-        function getHeight(el) {
-            var style = window.getComputedStyle(el);
-            var max_height = style.maxHeight.replace("px", "").replace("%", "");
-            if (style.display !== "none" && max_height !== "0") {
-                return el.offsetHeight;
-            }
-
-            var display = el.display;
-            el.style.display = "block";
-            wanted_height = el.offsetHeight;
-            el.style.display = display;
-            return wanted_height;
-        }
-
-        if (window.addEventListener) {
-            document.querySelector(".more").addEventListener("click", function(e) {
-                this.style.display = "none" // remove "more" link
-
-                // make inline bit visible
-                document.querySelector(".hide-inline").style.display = "inline";
-
-                // make block bit visible (ease in)
-                var hide_block = document.querySelector(".hide-block");
-                var max_height = 0;
-
-                max_height = getHeight(hide_block) + "px";
-                hide_block.style["transition"] = "max-height 0.5s ease-in-out"
-                hide_block.style.overflowY = "hidden";
-                hide_block.style.maxHeight = "0";
-                hide_block.setAttribute("data-max-height", max_height);
-                hide_block.style.display = "block";
-                setTimeout(function() {
-                    hide_block.style.maxHeight = max_height
-                }, 10);
-                setTimeout(function() {
-                    hide_block.style["transition"] = "all 0s 0s ease";
-                    hide_block.style["max-height"] = "none"
-                }, 700);
-
-                e.preventDefault(); // input is handled
-                return false
-            }, false);
-        }
-    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 
 </html>
