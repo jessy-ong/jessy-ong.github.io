@@ -134,14 +134,10 @@
             <!-- hidden iframe to push the script response to -->
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
             <form id="short-feedback" class="center-wrapper" target="hidden_iframe" onsubmit="onShortFeedbackSubmit();" action="https://script.google.com/macros/s/AKfycbwDHgyz5CZRHJbxIG5s3t0YYV5rYie3Mr7PCT69tK_ck5yynKw/exec" method="post">
-                <!--label>Leave me a message</label-->
-                <!--input type="text" name="message" id="message"-->
                 <div class="mdl-textfield mdl-js-textfield" style="margin-left:20px;">
-                    <input class="mdl-textfield__input" type="text" id="message">
+                    <input class="mdl-textfield__input" name="message" type="text" id="message">
                     <label class="mdl-textfield__label" for="message">Your message...</label>
                 </div>
-                <!--button type="submit">Send</button-->
-                <!-- Colored FAB button -->
                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
                     <i class="material-icons">send</i>
                 </button>
