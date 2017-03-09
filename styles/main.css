@@ -192,6 +192,7 @@ footer.site-footer {
 }
 
 .feedback-thanks {
+    padding-top: 25px;
     color: #2196F3;
     font-weight: lighter;
 }
